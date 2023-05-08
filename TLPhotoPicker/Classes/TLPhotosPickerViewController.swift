@@ -187,8 +187,8 @@ open class TLPhotosPickerViewController: UIViewController {
     @objc open var handleNoCameraPermissions: ((TLPhotosPickerViewController) -> Void)? = nil
     @objc open var dismissCompletion: (() -> Void)? = nil
     private var completionWithPHAssets: (([PHAsset]) -> Void)? = nil
-    private var completionWithTLPHAssets: (([TLPHAsset]) -> Void)? = nil
-    private var didCancel: (() -> Void)? = nil
+    var completionWithTLPHAssets: (([TLPHAsset]) -> Void)? = nil
+    var didCancel: (() -> Void)? = nil
     
     private var collections = [TLAssetsCollection]()
     private var focusedCollection: TLAssetsCollection? = nil
