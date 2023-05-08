@@ -569,10 +569,10 @@ extension TLPhotosPickerViewController {
             self.didCancel?()
         }
         if shouldDismiss {
-            self.dismiss(animated: true) { [weak self] in
-                self?.delegate?.dismissComplete()
-                self?.dismissCompletion?()
-            }
+//            self.dismiss(animated: true) { [weak self] in
+                self.delegate?.dismissComplete()
+                self.dismissCompletion?()
+//            }
         }
     }
     
